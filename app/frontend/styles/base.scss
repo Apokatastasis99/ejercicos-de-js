@@ -1,0 +1,104 @@
+html {
+  background-color: #ededed;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.label {
+  color: #363636;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.label:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.form-group > fieldset {
+  border: 0;
+}
+
+.single-form {
+  max-width: 400px;
+  margin: 100px auto;
+}
+
+.is-fullwidth {
+  width: 100%;
+}
+
+.is-justify-center{
+  justify-content: center;
+}
+
+.is-justify-center {
+  justify-content: center;
+}
+
+.is-align-center {
+  align-items: center;
+}
+
+.full-height {
+  min-height: 100%;
+}
+
+.is-flex-1 {
+  flex: 1;
+}
+
+.wrapper {
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.is-rounded {
+  border-radius: 50%;
+}
+
+.is-bg-white {
+  background-color: white;
+}
+
+.panel-body {
+  padding: 1.5em;
+}
+
+.spinner {
+  color: $primary;
+}
+
+
+.is-relative{
+  position: relative;
+}
+
+.is-bottom{
+  position: absolute;
+  right:    12px;
+  bottom:   12px;
+}
+
+.notification {
+  padding: 0.6em 0.8em !important;
+}
+.notification:not(:last-child){
+  margin-bottom: 0 !important;
+}
+.secret{
+  border-color: #00d1b2 !important;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  background-color: #d5fff7 !important;
+  padding: 0 2px;
+}
+
+.active{
+  font-weight: bold;
+}

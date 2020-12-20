@@ -1,0 +1,59 @@
+a.navbar-item:hover { color: $primary; }
+
+.offcanvas .menu > ul.menu-list a.is-active,
+.offcanvas .menu > ul.menu-list a.is-active:hover {
+  background-color: $primary;
+}
+.offcanvas .menu > ul.menu-list a,
+.offcanvas .menu.menu-collapsed > ul.menu-list > li .dropdown {
+  border-radius: 0;
+}
+.offcanvas .menu > ul.menu-list ul li a.is-active {
+  background-color: $gray-blue-700;
+  span { color: white !important; }
+}
+.offcanvas .menu > ul.menu-list ul li a.is-active:hover {
+  background-color: $gray-blue-700;
+}
+
+table.is-nowrapped > tbody > tr td:first-child {
+  white-space: nowrap;
+}
+
+.navbar-brand.navbar-logo {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-brand.navbar-logo {
+    width: auto;
+    min-width: 250px;
+  }
+}
+
+.spinner {
+  &.line-scale > div {
+    background-color: $grey;
+  }
+}
+
+.tag.is-bordered {
+  border: 1px solid #ccc;
+}
+
+.campaign-wrapper {
+  &__details {
+    font-size: 12px;
+    background: $success;
+    color: #333;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10000;
+  }
+
+  &__wrapped-page {
+    padding-bottom: 3rem;
+  }
+}

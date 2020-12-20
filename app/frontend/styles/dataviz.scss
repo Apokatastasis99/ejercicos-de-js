@@ -1,0 +1,50 @@
+svg.is-dataviz {
+  font: 11px sans-serif;
+}
+
+svg.is-dataviz-concept-map {
+  text {
+    pointer-events: none;
+  }
+
+  .inner_node text {
+    fill: white;
+  }
+  
+  
+  .inner_node rect {
+    pointer-events: all;
+  }
+  
+  .inner_node {
+    fill: black;
+  }
+  
+  .inner_node rect.highlight {
+    fill: #3492ff;
+  }
+  
+  .outer_node circle {
+    fill: #ededed;
+    stroke: black;
+    pointer-events: all;
+  }
+  
+  .outer_node circle.highlight {
+    stroke: #3492ff;
+    stroke-width: 2px;
+  }
+  
+  .link {
+    fill: none;
+    stroke: #999;
+    opacity: 0.3;
+    stroke-width: 2px;
+  }
+  
+  .is-highlight-link {
+    stroke-width: 2px;
+    opacity: 1;
+    stroke: #3492ff;
+  }
+}
