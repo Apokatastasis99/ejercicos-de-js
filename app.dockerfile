@@ -1,4 +1,4 @@
-FROM node:11-alpine
+FROM node:12-alpine
 RUN apk add python gcc g++ make curl
 
 ARG WORKING_DIR=/var/www
