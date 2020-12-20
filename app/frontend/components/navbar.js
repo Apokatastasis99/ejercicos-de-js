@@ -104,7 +104,7 @@ class NavBar extends Component {
           <div className={this.state.profileDropdown}>
             <div className='dropdown-menu' id='dropdown-menu' role='menu'>
               <div className='dropdown-content'>
-                <a className='dropdown-item' href={env.ADMIN_HOST}>Administrar</a>
+                <a className='dropdown-item' href={`${env.ADMIN_HOST}${env.ADMIN_PREFIX}`}>Administrar</a>
                 <a className='dropdown-item' onClick={() => this.handleLogout()}>
                   Salir
                 </a>
