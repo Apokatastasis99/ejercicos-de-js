@@ -118,7 +118,7 @@ class NavBar extends Component {
         <div className='navbar-item'>
           <div className='field is-grouped'>
             <p className='control'>
-              <a className='button' href={env.ADMIN_HOST}>Acceder</a>
+              <a className='button' href={`${env.ADMIN_HOST}${env.ADMIN_PREFIX}`}>Acceder</a>
             </p>
           </div>
         </div>
