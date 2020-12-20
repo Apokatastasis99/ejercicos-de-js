@@ -6,6 +6,8 @@ import { withRouter } from 'react-router'
 import api from '~base/api'
 import tree from '~core/tree'
 
+import env from '~base/env-variables'
+
 class NavBar extends Component {
   constructor (props) {
     super(props)
@@ -84,7 +86,7 @@ class NavBar extends Component {
     let username
     if (this.props.loggedIn) {
       if (tree.get('user')) {
-        username = tree.get('user').screenName
+        username = tree.get('user').displayName || tree.get('user').screenName
       }
 
       navButtons = (<div className='navbar-end'>
@@ -102,7 +104,7 @@ class NavBar extends Component {
           <div className={this.state.profileDropdown}>
             <div className='dropdown-menu' id='dropdown-menu' role='menu'>
               <div className='dropdown-content'>
-                <NavLink className='dropdown-item' onClick={() => this.toggleBtnClass()} to='/profile'>Perfil</NavLink>
+                <a className='dropdown-item' href={env.ADMIN_HOST}>Administrar</a>
                 <a className='dropdown-item' onClick={() => this.handleLogout()}>
                   Salir
                 </a>
@@ -116,7 +118,7 @@ class NavBar extends Component {
         <div className='navbar-item'>
           <div className='field is-grouped'>
             <p className='control'>
-              <NavLink className='bd-tw-button button' to='/log-in'>Acceder</NavLink>
+              <a className='button' href={env.ADMIN_HOST}>Acceder</a>
             </p>
           </div>
         </div>
