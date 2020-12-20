@@ -55,11 +55,8 @@ class Layout extends Component {
       return <div>Loading...</div>
     }
 
-    var userData
-
     return (<div>
       <NavBar />
-      {userData}
       {this.props.children}
     </div>)
   }
