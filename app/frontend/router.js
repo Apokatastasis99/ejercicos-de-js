@@ -10,6 +10,7 @@ import tree from '~core/tree'
 import Layout from '~components/layout'
 
 import Home from './pages/home'
+import Tool from './pages/tool'
 import About from './pages/about'
 import SignUp from './pages/sign-up'
 import LogIn from './pages/log-in'
@@ -53,6 +54,7 @@ const AppRouter = () => {
     <Layout>
       <Switch>
         {Home.asRouterItem()}
+        {Tool.asRouterItem()}
         {About.asRouterItem()}
         {EmailInviteLanding.asRouterItem()}
         {EmailResetLanding.asRouterItem()}

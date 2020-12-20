@@ -4,10 +4,11 @@ import Loader from '~base/components/spinner'
 import api from '~base/api'
 import ConceptMap from '~components/base-vis/concept-map'
 import classNames from 'classnames'
+import Stats from '~components/Stats'
 
 export default Page({
-  path: '/',
-  title: 'Home',
+  path: '/herramienta',
+  title: 'Herramienta',
   exact: true,
   component: class extends Component {
     constructor () {
@@ -16,14 +17,6 @@ export default Page({
       this.state = {
         loading: true,
         loaded: false,
-        stats: {
-          thesesCount: 0,
-          thesesFirstDegreeCount: 0,
-          thesesSecondDegreeCount: 0,
-          thesesThirdDegreeCount: 0,
-          thesesAuthorsCount: 0,
-          thesesAdvisorsCount: 0
-        },
         currentDataset: 'keywords',
         datasets: {
           concepts: {
@@ -49,13 +42,11 @@ export default Page({
       }
 
       try {
-        const stats = await api.get('/theses/stats')
         const concepts = await api.get('/datasets/concept-map', filters)
 
         this.setState({
           loading: false,
           loaded: true,
-          stats: { ...this.state.stats, ...stats },
           datasets: {
             concepts: {
               advisors: concepts.advisors,
@@ -97,7 +88,6 @@ export default Page({
     render () {
       const {
         loading,
-        stats,
         currentDataset,
         datasets
       } = this.state
@@ -166,48 +156,7 @@ export default Page({
               </div>
             </div>
 
-            <hr />
-
-            <div className='section'>
-              <nav className='level has-text-grey'>
-                <div className='level-item has-text-centered'>
-                  <div>
-                    <p className='title is-4 has-text-grey-dark'>{stats.thesesCount}</p>
-                    <p className='heading'>Tesis</p>
-                  </div>
-                </div>
-                <div className='level-item has-text-centered'>
-                  <div>
-                    <p className='title is-4 has-text-grey-dark'>{stats.thesesFirstDegreeCount}</p>
-                    <p className='heading'>Licenciatura</p>
-                  </div>
-                </div>
-                <div className='level-item has-text-centered'>
-                  <div>
-                    <p className='title is-4 has-text-grey-dark'>{stats.thesesSecondDegreeCount}</p>
-                    <p className='heading'>Maestría</p>
-                  </div>
-                </div>
-                <div className='level-item has-text-centered'>
-                  <div>
-                    <p className='title is-4 has-text-grey-dark'>{stats.thesesThirdDegreeCount}</p>
-                    <p className='heading'>Doctorado</p>
-                  </div>
-                </div>
-                <div className='level-item has-text-centered'>
-                  <div>
-                    <p className='title is-4 has-text-grey-dark'>{stats.thesesAuthorsCount}</p>
-                    <p className='heading'>Autores</p>
-                  </div>
-                </div>
-                <div className='level-item has-text-centered'>
-                  <div>
-                    <p className='title is-4 has-text-grey-dark'>{stats.thesesAdvisorsCount}</p>
-                    <p className='heading'>Asesores</p>
-                  </div>
-                </div>
-              </nav>
-            </div>
+            <Stats />
           </div>
         </section>
       )

@@ -140,8 +140,11 @@ class NavBar extends Component {
         </div>
         <div className={navbarMenuClassName}>
           <div className='navbar-start'>
-            <NavLink className='navbar-item' to='/about'>
+            <NavLink exact className='navbar-item' to='/'>
               Acerca
+            </NavLink>
+            <NavLink exact className='navbar-item' to='/herramienta'>
+              Herramienta
             </NavLink>
           </div>
           {navButtons}
