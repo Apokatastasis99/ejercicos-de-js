@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
+import 'd3-transition'
 import { Scrollbars } from 'react-custom-scrollbars'
 
 import api from '~base/api'
