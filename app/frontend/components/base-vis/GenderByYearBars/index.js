@@ -17,7 +17,7 @@ const GenderByYearBars = () => {
   const [data, setData] = useState([])
 
   const height = 300
-  const width = 3000
+  const width = 2400
 
   // Get series from api
   const getData = async () => {
@@ -50,7 +50,7 @@ const GenderByYearBars = () => {
       .domain([0, d3.max(series, d => d3.max(d, d => d[1]))])
       .rangeRound([height - margin.bottom, margin.top])
 
-    const color = d3.scaleOrdinal(d3.schemeCategory10)
+    const color = d3.scaleOrdinal(d3.schemePastel2)
 
     const xAxis = g => g
       .attr('transform', `translate(0,${height - margin.bottom})`)
