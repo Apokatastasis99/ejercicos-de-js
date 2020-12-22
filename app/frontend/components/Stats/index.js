@@ -19,7 +19,7 @@ const Stats = () => {
       ...currentStats,
       ...stats
     })
-    setIsLoading(false);
+    setIsLoading(false)
   }
 
   useEffect(() => {

@@ -3,6 +3,7 @@ import * as d3 from 'd3'
 import { Scrollbars } from 'react-custom-scrollbars'
 
 import api from '~base/api'
+import Loader from '~base/components/spinner'
 import { error } from '~base/components/toast'
 
 const labels = {
@@ -12,6 +13,7 @@ const labels = {
 
 const GenderByYearBars = () => {
   const vis = useRef(null)
+  const [isLoading, setIsLoading] = useState(true)
   const [data, setData] = useState([])
 
   const height = 300
@@ -25,6 +27,7 @@ const GenderByYearBars = () => {
     } catch (err) {
       error()
     }
+    setIsLoading(false)
   }
 
   // Draw visualization
@@ -119,6 +122,7 @@ const GenderByYearBars = () => {
     <Scrollbars autoHide={false} style={{ height: 320, position: 'relative' }}>
       <div ref={vis} style={{ position: 'absolute', right: 0, left: 0, top: 0, bottom: 0 }} />
       <div className='vis-tooltip-container' />
+      {isLoading && <Loader />}
     </Scrollbars>
   )
 }

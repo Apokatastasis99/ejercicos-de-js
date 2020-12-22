@@ -48,7 +48,7 @@ const Home = () => {
         </div>
         <div className='column'>
           <div className='box'>
-            <h4 className='has-text-centered'>Años y géneros</h4>
+            <h4 className='has-text-centered mb-3'>Por años y género</h4>
             <GenderByYearBars />
           </div>
         </div>
