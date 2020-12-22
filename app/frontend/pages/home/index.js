@@ -1,11 +1,12 @@
 import React from 'react'
 import Page from '~base/page'
 import Stats from '~components/Stats'
+import GenderByYearBars from '../../components/base-vis/GenderByYearBars'
 
 const Home = () => {
   return (
-    <div className='section'>
-      <div className='columns'>
+    <div className='container is-fluid mt-6'>
+      <div className='columns is-variable is-6'>
         <div className='column'>
           <div className='content'>
             <h2>Acerca</h2>
@@ -45,7 +46,12 @@ const Home = () => {
             </ul>
           </div>
         </div>
-        <div className='column' />
+        <div className='column'>
+          <div className='box'>
+            <h4 className='has-text-centered'>Años y géneros</h4>
+            <GenderByYearBars />
+          </div>
+        </div>
       </div>
 
       <Stats />

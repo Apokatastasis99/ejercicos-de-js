@@ -6,6 +6,9 @@ import tree from '~core/tree'
 
 import NavBar from '~components/navbar'
 
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 class Layout extends Component {
   constructor (props) {
     super(props)
@@ -57,6 +60,7 @@ class Layout extends Component {
 
     return (<div>
       <NavBar />
+      <ToastContainer />
       {this.props.children}
     </div>)
   }

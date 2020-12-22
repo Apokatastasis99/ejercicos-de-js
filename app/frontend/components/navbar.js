@@ -126,28 +126,30 @@ class NavBar extends Component {
     }
 
     return (
-      <nav className='navbar'>
-        <div className='navbar-brand'>
-          <NavLink className='navbar-item' to='/'>
-            <h1>Tesis de filosofía</h1>
-          </NavLink>
+      <nav className='navbar is-fixed-top'>
+        <div className='container is-fluid'>
+          <div className='navbar-brand'>
+            <NavLink className='navbar-item' to='/'>
+              <h1>Tesis de filosofía</h1>
+            </NavLink>
 
-          <div className='navbar-burger burger' onClick={(e) => this.handleNavbarBurgerClick(e)}>
-            <span />
-            <span />
-            <span />
+            <div className='navbar-burger burger' onClick={(e) => this.handleNavbarBurgerClick(e)}>
+              <span />
+              <span />
+              <span />
+            </div>
           </div>
-        </div>
-        <div className={navbarMenuClassName}>
-          <div className='navbar-start'>
-            <NavLink exact className='navbar-item' to='/'>
-              Acerca
-            </NavLink>
-            <NavLink exact className='navbar-item' to='/herramienta'>
-              Herramienta
-            </NavLink>
+          <div className={navbarMenuClassName}>
+            <div className='navbar-start'>
+              <NavLink exact className='navbar-item' to='/'>
+                Acerca
+              </NavLink>
+              <NavLink exact className='navbar-item' to='/herramienta'>
+                Herramienta
+              </NavLink>
+            </div>
+            {navButtons}
           </div>
-          {navButtons}
         </div>
       </nav>
     )
