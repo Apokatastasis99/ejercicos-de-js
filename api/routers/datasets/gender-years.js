@@ -24,7 +24,9 @@ module.exports = new Route({
             $sum: {
               $cond: {
                 if: {
-                  $eq: ['$gender', 'male']
+                  $and: [
+                    { $eq: ['$gender', 'male'] }
+                  ]
                 },
                 then: 1,
                 else: 0
@@ -35,7 +37,93 @@ module.exports = new Route({
             $sum: {
               $cond: {
                 if: {
-                  $eq: ['$gender', 'female']
+                  $and: [
+                    { $eq: ['$gender', 'female'] }
+                  ]
+                },
+                then: 1,
+                else: 0
+              }
+            }
+          },
+          maleBachelor: {
+            $sum: {
+              $cond: {
+                if: {
+                  $and: [
+                    { $eq: ['$gender', 'male'] },
+                    { $regexMatch: { input: '$degree', regex: /licenciatura/gi } }
+                  ]
+                },
+                then: 1,
+                else: 0
+              }
+            }
+          },
+          femaleBachelor: {
+            $sum: {
+              $cond: {
+                if: {
+                  $and: [
+                    { $eq: ['$gender', 'female'] },
+                    { $regexMatch: { input: '$degree', regex: /licenciatura/gi } }
+                  ]
+                },
+                then: 1,
+                else: 0
+              }
+            }
+          },
+          maleMaster: {
+            $sum: {
+              $cond: {
+                if: {
+                  $and: [
+                    { $eq: ['$gender', 'male'] },
+                    { $regexMatch: { input: '$degree', regex: /maestria|maestría/gi } }
+                  ]
+                },
+                then: 1,
+                else: 0
+              }
+            }
+          },
+          femaleMaster: {
+            $sum: {
+              $cond: {
+                if: {
+                  $and: [
+                    { $eq: ['$gender', 'female'] },
+                    { $regexMatch: { input: '$degree', regex: /maestria|maestría/gi } }
+                  ]
+                },
+                then: 1,
+                else: 0
+              }
+            }
+          },
+          maleDoctorate: {
+            $sum: {
+              $cond: {
+                if: {
+                  $and: [
+                    { $eq: ['$gender', 'male'] },
+                    { $regexMatch: { input: '$degree', regex: /doctorado/gi } }
+                  ]
+                },
+                then: 1,
+                else: 0
+              }
+            }
+          },
+          femaleDoctorate: {
+            $sum: {
+              $cond: {
+                if: {
+                  $and: [
+                    { $eq: ['$gender', 'female'] },
+                    { $regexMatch: { input: '$degree', regex: /doctorado/gi } }
+                  ]
                 },
                 then: 1,
                 else: 0
@@ -50,7 +138,13 @@ module.exports = new Route({
           year: '$_id.year',
           count: '$count',
           male: '$male',
-          female: '$female'
+          female: '$female',
+          maleBachelor: '$maleBachelor',
+          femaleBachelor: '$femaleBachelor',
+          maleMaster: '$maleMaster',
+          femaleMaster: '$femaleMaster',
+          maleDoctorate: '$maleDoctorate',
+          femaleDoctorate: '$femaleDoctorate'
         }
       },
       {
