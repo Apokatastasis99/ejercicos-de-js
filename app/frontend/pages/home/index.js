@@ -2,6 +2,7 @@ import React from 'react'
 import Page from '~base/page'
 import Stats from '~components/Stats'
 import GenderByYearBars from '../../components/base-vis/GenderByYearBars'
+import DegreeTrendChart from '../../components/base-vis/DegreeTrendChart'
 
 const Home = () => {
   return (
@@ -50,6 +51,11 @@ const Home = () => {
           <div className='box'>
             <h4 className='has-text-centered mb-3'>Por años y género</h4>
             <GenderByYearBars />
+          </div>
+
+          <div className='box'>
+            <h4 className='has-text-centered mb-3'>Por años y grados</h4>
+            <DegreeTrendChart />
           </div>
         </div>
       </div>

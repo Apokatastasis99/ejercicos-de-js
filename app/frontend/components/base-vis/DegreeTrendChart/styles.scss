@@ -1,0 +1,67 @@
+
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #555;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  fill: #555;
+}
+
+.axis .tick line {
+  stroke: rgba(0, 0, 0, 0.1);
+}
+
+.area {
+  stroke-width: 1;
+
+  &.f0 {
+    fill: rgba(#8dd3c7, 0.6);
+    stroke: rgba(#8dd3c7, 0.6);
+  }
+  &.f1 {
+    fill: rgba(#fb8072, 0.6);
+    stroke: rgba(#fb8072, 0.6);
+  }
+  &.f2 {
+    fill: rgba(#9467bd, 0.6);
+    stroke: rgba(#9467bd, 0.6);
+  }
+}
+
+.legend {
+  text {
+    fill: #444;
+    font-size: 13px;
+  }
+
+  .legend-bg {
+    width: 150px;
+    fill: #fff;
+    stroke: #fff;
+  }
+
+  .f0 {
+    fill: rgba(#8dd3c7, 0.6);
+    stroke: rgba(#8dd3c7, 0.6);
+  }
+
+  .f1 {
+    fill: rgba(#fb8072, 0.6);
+    stroke: rgba(#fb8072, 0.6);
+  }
+  .f2 {
+    fill: rgba(#9467bd, 0.6);
+    stroke: rgba(#9467bd, 0.6);
+  }
+}
+
+.median-line,
+.legend .median-line {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1;
+}
