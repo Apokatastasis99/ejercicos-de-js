@@ -45,6 +45,38 @@ const Home = () => {
               <li>Identificar las relaciones existentes entre la producción de la filosofía en la UNAM y la filosofía en otro países.</li>
               <li>Generar una metodología de trabajo que sea posible replicar en otras instituciones y en relación con otros saberes</li>
             </ul>
+
+            <h3>Participantes</h3>
+            <p className="is-margin-bottom-small">
+              <span className="is-block has-text-weight-bold">Coordinador</span>
+              <span className="is-block">José Francisco Barrón Tovar</span>
+            </p>
+
+            <p className="is-margin-bottom-small">
+              <span className="is-block has-text-weight-bold">Desarrollador</span>
+              <span className="is-block">Marco Antonio Godínez  Bustos</span>
+            </p>
+
+            <p className="is-margin-bottom-small">
+              <span className="is-block has-text-weight-bold">Equipo</span>
+              <span className="is-block">Diego Fernando López López</span>
+              <span className="is-block">Diego Fernando López López</span>
+              <span className="is-block">Ricardo Ali Díaz García Figueroa</span>
+              <span className="is-block">Rodrigo Ramos Xochiteotzin</span>
+              <span className="is-block">Emma Gabriela Sánchez Baizabal</span>
+              <span className="is-block">Yahotzin Domínguez Salazar</span>
+              <span className="is-block">Víctor Águila</span>
+            </p>
+
+            <h3>Contacto</h3>
+            <p>
+              <span className="is-block has-text-weight-bold">
+                <a href="mailto:stf@filos.unam.mx">stf@filos.unam.mx</a>
+              </span>
+              <small>
+                Usa en Twitter <a href="https://twitter.com/hashtag/SeminarioTF?f=live">#SeminarioTF</a> o <a href="https://twitter.com/hashtag/TesisFilosUNAM?f=live">#TesisFilosUNAM</a>
+              </small>
+            </p>
           </div>
         </div>
         <div className='column'>
