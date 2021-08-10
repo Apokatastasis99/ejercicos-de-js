@@ -60,7 +60,6 @@ const Home = () => {
             <p className="is-margin-bottom-small">
               <span className="is-block has-text-weight-bold">Equipo</span>
               <span className="is-block">Diego Fernando López López</span>
-              <span className="is-block">Diego Fernando López López</span>
               <span className="is-block">Ricardo Ali Díaz García Figueroa</span>
               <span className="is-block">Rodrigo Ramos Xochiteotzin</span>
               <span className="is-block">Emma Gabriela Sánchez Baizabal</span>
